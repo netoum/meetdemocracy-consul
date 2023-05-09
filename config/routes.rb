@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => "/ckeditor"
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+  mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?
 
   draw :account
   draw :admin

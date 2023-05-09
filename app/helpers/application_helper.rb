@@ -43,9 +43,7 @@ module ApplicationHelper
   end
 
   def back_link_to(destination = :back, text = t("shared.back"))
-    link_to destination, class: "back" do
-      tag.span(class: "icon-angle-left") + text
-    end
+    GovukPublishingComponents.render("govuk_publishing_components/components/back_link", href: destination, text: text)
   end
 
   def image_path_for(filename)

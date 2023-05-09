@@ -27,3 +27,5 @@
 gem 'cookies_eu'
 
 gem 'rails-timeago', '~> 2.0'
+
+gem "govuk_publishing_components"

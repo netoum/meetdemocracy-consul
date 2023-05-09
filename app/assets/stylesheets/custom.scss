@@ -20,3 +20,19 @@
       display: table-cell;
     }
   }
+
+
+  .button{
+    @extend .gem-c-button;
+    @extend .govuk-button;
+  }
+.delete {
+  @extend .gem-c-button;
+    @extend .govuk-button;
+    @extend .govuk-button--warning;
+   }
+
+.hollow {
+    @extend .gem-c-button--secondary;
+   }
+
