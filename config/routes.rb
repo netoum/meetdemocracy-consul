@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get "/welcome", to: "welcome#welcome"
   get "/consul.json", to: "installation#details"
   get "robots.txt", to: "robots#index"
+  get "accept_cookies", to: "users#accept_cookies"
 
   resources :stats, only: [:index]
   resources :images, only: [:destroy]
