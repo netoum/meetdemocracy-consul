@@ -13,7 +13,7 @@
     <%= raw setting["per_page_code_head"] %>
   </head>
   <body class="proposal-dashboard">
-    <%= render 'cookies_eu/consent_banner', link: '/privacy', target: '_blank' %>
+    <%= render 'cookies_eu/consent_banner', link: '/privacy', target: '_blank' unless current_user&.cookies_accepted %>
 
     <%= raw setting["per_page_code_body"] %>
 
@@ -39,4 +39,5 @@
       </div>
     </div>
   </body>
+  <%= render "layouts/cookies" unless current_user&.cookies_accepted %>
 </html>

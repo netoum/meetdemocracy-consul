@@ -1,0 +1,8 @@
+<script>
+  $(document).on('click','.cookies-eu-ok', function() {
+    $.ajax({
+      url: "/accept_cookies",
+      type: "GET"
+    });
+  });
+</script>

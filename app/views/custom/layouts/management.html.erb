@@ -7,7 +7,7 @@
   </head>
 
   <body class="admin">
-    <%= render 'cookies_eu/consent_banner', link: '/privacy', target: '_blank' %>
+    <%= render 'cookies_eu/consent_banner', link: '/privacy', target: '_blank' unless current_user&.cookies_accepted %>
 
     <%= render Layout::AdminHeaderComponent.new(manager_logged_in) %>
 
@@ -28,4 +28,5 @@
       </main>
     </div>
   </body>
+  <%= render "layouts/cookies" unless current_user&.cookies_accepted %>
 </html>
